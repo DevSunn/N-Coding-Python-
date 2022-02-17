@@ -128,3 +128,25 @@
 #문자열 처리 함수
 python = "Python is Amazing"
 print(python.lower())
+print(python.upper())
+print(python[0].isupper())
+print(len(python))
+print(python.replace("Python", "Java"))
+
+index = python.index("n")
+print(index)
+index = python.index("n", index + 1)
+print(index)
+
+print(python.find("Java")) # 없으면 -1
+#print(python.index("Java")) # 없으면 오류
+print("hi")
+
+print(python.count("n")) # 등장한 횟수
+
+#문자열 포맷
+# print("a", "b")
+
+# 방법 1
+print("나는 %d살입니다." % 20)
+
