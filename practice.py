@@ -126,23 +126,23 @@
 # # 맨 뒤에서 7번째부터 끝까지
 
 #문자열 처리 함수
-python = "Python is Amazing"
-print(python.lower())
-print(python.upper())
-print(python[0].isupper())
-print(len(python))
-print(python.replace("Python", "Java"))
+# python = "Python is Amazing"
+# print(python.lower())
+# print(python.upper())
+# print(python[0].isupper())
+# print(len(python))
+# print(python.replace("Python", "Java"))
 
-index = python.index("n")
-print(index)
-index = python.index("n", index + 1)
-print(index)
+# index = python.index("n")
+# print(index)
+# index = python.index("n", index + 1)
+# print(index)
 
-print(python.find("Java")) # 없으면 -1
-#print(python.index("Java")) # 없으면 오류
-print("hi")
+# print(python.find("Java")) # 없으면 -1
+# #print(python.index("Java")) # 없으면 오류
+# print("hi")
 
-print(python.count("n")) # 등장한 횟수
+# print(python.count("n")) # 등장한 횟수
 
 #문자열 포맷
 # print("a", "b")
@@ -171,14 +171,23 @@ print(python.count("n")) # 등장한 횟수
 # print("나는 {age}살이며, {color}색을 좋아해요.")
 
 # 탈출 문자( \n : 줄바꿈)
-print("백문이 불여일견\n백견이 불여일타")
+# print("백문이 불여일견\n백견이 불여일타")
 
 # \" \' : 문장 내에서 따옴표
 # 저는 "나도코딩"입니다.
-print("저는 '나도코딩'입니다.")
-print('저는 "나도코딩"입니다')
-print("저는 \"나도코딩\"입니다.")
-print("저는 \'나도코딩\'입니다.")
+# print("저는 '나도코딩'입니다.")
+# print('저는 "나도코딩"입니다')
+# print("저는 \"나도코딩\"입니다.")
+# print("저는 \'나도코딩\'입니다.")
 
 # \\ : 문장 내에서 \
-print("C:\\Users\\Nadocoding\\Desktop\\PythonWorkspace>")
+# print("C:\\Users\\Nadocoding\\Desktop\\PythonWorkspace>")
+
+# \r : 커서를 맨 앞으로 이동
+# print("Red Apple\rpine")
+
+# \b : 백스페이스 (한 글자 삭제)
+# print("Redd\bApple") 
+
+# \t : 탭
+# print("Red\tApple")
