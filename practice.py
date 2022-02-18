@@ -149,4 +149,7 @@ print(python.count("n")) # 등장한 횟수
 
 # 방법 1
 print("나는 %d살입니다." % 20)
+print("나는 #s를 좋아해요." % "파이썬")
+print("Apple 은 %c로 시작해요." % "A")
+
 
