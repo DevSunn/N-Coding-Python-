@@ -23,10 +23,14 @@
 
 # 일반 유닛
 class Unit:
-    def __init__(self, name, hp):
+    def __init__(self, name, hp, speed):
         self.name = name
         self.hp = hp
-        
+        self.speed = speed
+
+        def move(self, location):
+            print("[지상 유닛 이동]")
+
 # # marine1 = Unit("마린", 40, 5)
 # # marine2 = Unit("마린", 40, 5)
 # # tank = Unit("탱크", 150, 35)
@@ -83,6 +87,6 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         AttackUnit.__init__(self, name, hp, damage)
         Flyable.__init__(self, flying_speed)
 
-# 발키리 : 공중 공격 유닛, 한번에 14발 미사일 발사.
-valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
-valkyrie.fly(valkyrie.name, "3시")
+# # 발키리 : 공중 공격 유닛, 한번에 14발 미사일 발사.
+# valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
+# valkyrie.fly(valkyrie.name, "3시")
