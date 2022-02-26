@@ -30,6 +30,7 @@ class Unit:
 
         def move(self, location):
             print("[지상 유닛 이동]")
+            print("{0} : {1} 방향으로 이동합니다. [속도 {2}]".format(self.name, location, self.speed))
 
 # # marine1 = Unit("마린", 40, 5)
 # # marine2 = Unit("마린", 40, 5)
@@ -48,8 +49,8 @@ class Unit:
 
 # 공격 유닛
 class AttackUnit:
-    def __init__(self, name, hp, damage):
-        Unit.__init__(self, name, hp)
+    def __init__(self, name, hp, speed, damage):
+        Unit.__init__(self, name, hp, speed)
         self.damage = damage
 
     def attack(self, location):
