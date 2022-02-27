@@ -28,9 +28,9 @@ class Unit:
         self.hp = hp
         self.speed = speed
 
-        def move(self, location):
-            print("[지상 유닛 이동]")
-            print("{0} : {1} 방향으로 이동합니다. [속도 {2}]".format(self.name, location, self.speed))
+    def move(self, location):
+        print("[지상 유닛 이동]")
+        print("{0} : {1} 방향으로 이동합니다. [속도 {2}]".format(self.name, location, self.speed))
 
 # # marine1 = Unit("마린", 40, 5)
 # # marine2 = Unit("마린", 40, 5)
@@ -48,7 +48,7 @@ class Unit:
 #     print("{0} 는 현재 클로킹 상태입니다.".format(wraith2.name))
 
 # 공격 유닛
-class AttackUnit:
+class AttackUnit(Unit):
     def __init__(self, name, hp, speed, damage):
         Unit.__init__(self, name, hp, speed)
         self.damage = damage
@@ -88,12 +88,39 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         AttackUnit.__init__(self, name, hp, 0, damage) # 지상 speed 0
         Flyable.__init__(self, flying_speed)
 
+    def move(self, location):
+        print("[공중 유닛 이동]")
+        self.fly(self.name, location)
+
 # # 발키리 : 공중 공격 유닛, 한번에 14발 미사일 발사.
 # valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
 # valkyrie.fly(valkyrie.name, "3시")
 
-# 벌쳐 : 지상 유닛, 기동성이 좋음
-vulture = AttackUnit("벌쳐", 80, 10, 20)
+# # 벌쳐 : 지상 유닛, 기동성이 좋음
+# vulture = AttackUnit("벌쳐", 80, 10, 20)
 
-# 배틀크루저 : 공중 유닛, 체력도 굉장히 좋음, 공격력도 좋음.
-battlecruiser = FlyableAttackUnit
+# # 배틀크루저 : 공중 유닛, 체력도 굉장히 좋음, 공격력도 좋음.
+# battlecruiser = FlyableAttackUnit("배틀크루저", 500, 25, 3)
+
+# vulture.move("11시")
+# # battlecruiser.fly(battlecruiser.name, "9시")
+# battlecruiser.move("9시")
+
+# 건물
+class BuildinUnit(Unit):
+    def __init__(self, name, hp, location):
+        # Unit.__init__(self, name, hp, 0)
+        super().__init__(name, hp, 0)
+        self.location = location
+
+# # 서플라이 디폿 : 건물, 1개 건물 = 8 유닛.
+# supply_depot = BuildinUnit("서플라이 디폿", 500, "7시")
+
+# def game_start():
+#     print("[알림] 새로운 게임을 시작합니다.")
+
+# def game_over():
+#     pass
+
+# game_start()
+# game_over()
