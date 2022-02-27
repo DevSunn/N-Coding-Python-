@@ -85,9 +85,15 @@ class Flyable:
 # 공중 공격 유닛 클래스
 class FlyableAttackUnit(AttackUnit, Flyable):
     def __init__(self, name, hp, damage, flying_speed):
-        AttackUnit.__init__(self, name, hp, damage)
+        AttackUnit.__init__(self, name, hp, 0, damage) # 지상 speed 0
         Flyable.__init__(self, flying_speed)
 
 # # 발키리 : 공중 공격 유닛, 한번에 14발 미사일 발사.
 # valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
 # valkyrie.fly(valkyrie.name, "3시")
+
+# 벌쳐 : 지상 유닛, 기동성이 좋음
+vulture = AttackUnit("벌쳐", 80, 10, 20)
+
+# 배틀크루저 : 공중 유닛, 체력도 굉장히 좋음, 공격력도 좋음.
+battlecruiser = FlyableAttackUnit
